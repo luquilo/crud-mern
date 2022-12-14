@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import UserRoute from './routes/UserRoutes.js';
+
 
 const app = express()
 //found this on on stackoverflow
@@ -19,5 +21,6 @@ db.once('open', () => console.log('Database Connected...'))
 app.use(cors())
 //menggunakan express json agar bisa menerima data dalam format json
 app.use(express.json())
+app.use
 
 app.listen(5000, ()=> console.log('server is up and running...') ) 
